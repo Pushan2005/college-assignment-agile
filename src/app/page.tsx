@@ -1,12 +1,35 @@
 import Image from "next/image";
 import heroImage from "../../public/porsche-1.webp";
+import Link from "next/link";
 
 export default function AutoLandingPage() {
     return (
         <div className="min-h-screen bg-gray-900 text-white">
             <header className="bg-gray-800 text-white">
                 <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-                    <div className="text-2xl font-bold">Porsche</div>
+                    <Link href="/" className="text-2xl font-bold">
+                        Porsche
+                    </Link>
+                    <nav>
+                        <ul className="flex space-x-6">
+                            <li>
+                                <a
+                                    href="/models"
+                                    className="hover:text-gray-300"
+                                >
+                                    Models
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/stores"
+                                    className="hover:text-gray-300"
+                                >
+                                    Stores
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
 
@@ -27,7 +50,7 @@ export default function AutoLandingPage() {
                         experience
                     </p>
                     <a
-                        href="#"
+                        href="/models"
                         className="bg-white bg-opacity-20 backdrop-blur-[2px] text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition duration-300"
                     >
                         Become Exclusive
